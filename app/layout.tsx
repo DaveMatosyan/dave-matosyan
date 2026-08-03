@@ -63,7 +63,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-ink text-cream font-sans antialiased">
+      <body
+        suppressHydrationWarning
+        className="bg-ink text-cream font-sans antialiased"
+      >
         <SmoothScroll />
         {children}
         <Grain />
