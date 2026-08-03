@@ -33,10 +33,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <script
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: `if(!matchMedia("(prefers-reduced-motion: reduce)").matches)requestAnimationFrame(function(){document.documentElement.classList.add("anim")});`,
           }}

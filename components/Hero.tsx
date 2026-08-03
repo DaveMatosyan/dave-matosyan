@@ -45,28 +45,36 @@ export default function Hero() {
         <span className="hidden sm:block">{hero.location}</span>
       </div>
 
-      <div className="relative flex flex-1 flex-col justify-center py-12">
-        <h1 className="font-display text-[clamp(4rem,14vw,9.5rem)] font-bold uppercase leading-[0.9] tracking-tighter">
-          <Line text={hero.nameLines[0]} delay={0.1} />
-          <Line text={hero.nameLines[1]} delay={0.22} />
-        </h1>
+      <div className="relative grid flex-1 items-stretch gap-8 py-12 lg:grid-cols-[1fr_minmax(300px,420px)] lg:gap-14">
+        <div className="flex flex-col justify-center">
+          <h1 className="font-display text-[clamp(3.5rem,11vw,8.5rem)] font-bold uppercase leading-[0.9] tracking-tighter">
+            <Line text={hero.nameLines[0]} delay={0.1} />
+            <Line text={hero.nameLines[1]} delay={0.22} />
+          </h1>
+
+          <div
+            className="fade-up mt-10"
+            style={{ "--d": "0.5s" } as React.CSSProperties}
+          >
+            <p className="max-w-xl text-base text-fog md:text-lg">
+              {pre}
+              <span className="text-lime">can&apos;t</span>
+              {post}
+            </p>
+          </div>
+        </div>
 
         <div
-          className="fade-up mt-10 flex flex-col-reverse items-start justify-between gap-8 md:flex-row md:items-end"
-          style={{ "--d": "0.5s" } as React.CSSProperties}
+          className="fade-up relative h-80 overflow-hidden rounded-2xl border border-line sm:h-96 lg:h-auto lg:min-h-[420px]"
+          style={{ "--d": "0.35s" } as React.CSSProperties}
         >
-          <p className="max-w-xl text-base text-fog md:text-lg">
-            {pre}
-            <span className="text-lime">can&apos;t</span>
-            {post}
-          </p>
           <Image
             src="/david.jpg"
             alt="David Matosyan"
-            width={112}
-            height={112}
+            fill
             priority
-            className="h-24 w-24 rounded-full object-cover grayscale contrast-105 transition duration-500 hover:grayscale-0 md:h-28 md:w-28 ring-1 ring-line hover:ring-lime"
+            sizes="(min-width: 1024px) 420px, 100vw"
+            className="object-cover object-top grayscale contrast-105 transition duration-700 hover:grayscale-0"
           />
         </div>
       </div>
