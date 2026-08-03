@@ -20,9 +20,28 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://davidmatosyan.vercel.app"),
   title: "David Matosyan — Backend Engineer × AI-Native Builder",
   description:
-    "Claude writes most of my code. I do the parts AI can't — knowing what the product needs, catching what's wrong, shipping what's right.",
+    "Claude writes most of my code. I do the parts AI can't — knowing what the product needs, catching what's wrong, shipping what's right. C#/.NET, fintech, agentic AI. Yerevan, Armenia.",
+  openGraph: {
+    title: "David Matosyan — Backend Engineer × AI-Native Builder",
+    description:
+      "Backend judgment × AI speed. Payments, secrets management, ticketing, LLM pipelines.",
+    url: "/",
+    siteName: "David Matosyan",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "David Matosyan — Backend Engineer × AI-Native Builder",
+    description:
+      "Backend judgment × AI speed. Payments, secrets management, ticketing, LLM pipelines.",
+  },
+};
+
+export const viewport = {
+  themeColor: "#0a0a0b",
 };
 
 export default function RootLayout({
