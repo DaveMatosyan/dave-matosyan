@@ -35,6 +35,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if(!matchMedia("(prefers-reduced-motion: reduce)").matches)requestAnimationFrame(function(){document.documentElement.classList.add("anim")});`,
+          }}
+        />
+      </head>
       <body className="bg-ink text-cream font-sans antialiased">
         <SmoothScroll />
         {children}
