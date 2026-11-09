@@ -74,7 +74,7 @@ export default function Hero() {
             fill
             priority
             sizes="(min-width: 1024px) 420px, 100vw"
-            className="object-cover object-top grayscale contrast-105 transition duration-700 hover:grayscale-0"
+            className="object-cover object-center grayscale contrast-105 transition duration-700 hover:grayscale-0"
           />
         </div>
       </div>

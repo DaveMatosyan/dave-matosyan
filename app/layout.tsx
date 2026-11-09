@@ -20,23 +20,23 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://davidmatosyan.vercel.app"),
-  title: "David Matosyan — Backend Engineer × AI-Native Builder",
+  metadataBase: new URL("https://dave-matosyan.site"),
+  title: "David Matosyan — Backend & AI Engineer",
   description:
-    "Claude writes most of my code. I do the parts AI can't — knowing what the product needs, catching what's wrong, shipping what's right. C#/.NET, fintech, agentic AI. Yerevan, Armenia.",
+    "Claude writes most of my code. I do the parts AI can't — knowing what the product needs, catching what's wrong, shipping what's right. Python, C#/.NET, fintech, agentic AI. Yerevan, Armenia.",
   openGraph: {
-    title: "David Matosyan — Backend Engineer × AI-Native Builder",
+    title: "David Matosyan — Backend & AI Engineer",
     description:
-      "Backend judgment × AI speed. Payments, secrets management, ticketing, LLM pipelines.",
+      "Backend judgment × AI speed. Python, C#/.NET, payments, secrets management, ticketing, multi-agent LLM pipelines.",
     url: "/",
     siteName: "David Matosyan",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "David Matosyan — Backend Engineer × AI-Native Builder",
+    title: "David Matosyan — Backend & AI Engineer",
     description:
-      "Backend judgment × AI speed. Payments, secrets management, ticketing, LLM pipelines.",
+      "Backend judgment × AI speed. Python, C#/.NET, payments, secrets management, ticketing, multi-agent LLM pipelines.",
   },
 };
 

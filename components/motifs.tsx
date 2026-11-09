@@ -72,9 +72,36 @@ function Ticket() {
   );
 }
 
+function Slots() {
+  return (
+    <svg viewBox="0 0 420 420" className={common} aria-hidden>
+      {Array.from({ length: 4 }, (_, col) =>
+        Array.from({ length: 5 }, (_, row) => {
+          const active = (col === 1 && row === 2) || (col === 2 && row === 1);
+          return (
+            <rect
+              key={`${col}-${row}`}
+              x={60 + col * 80}
+              y={70 + row * 58}
+              width="62"
+              height="42"
+              rx="8"
+              fill={active ? "#d6ff3f" : "none"}
+              fillOpacity={active ? 0.12 : 0}
+              stroke={active ? "#d6ff3f" : "#26262a"}
+              strokeWidth={active ? 1.5 : 1}
+            />
+          );
+        }),
+      )}
+    </svg>
+  );
+}
+
 export const motifs: Record<Motif, React.ReactNode> = {
   streams: <Streams />,
   ledger: <Ledger />,
   lattice: <Lattice />,
   ticket: <Ticket />,
+  slots: <Slots />,
 };
